@@ -15,7 +15,7 @@ const Header =()=>{
             We are a family owned Mediterraneran restaurant, focused on
             traditional recipes servred with a modern twist.
           </p>
-          <Link to="/booking">
+          <Link to='/booking'>
            <button>Reserve the table</button>
           </Link>
           </div>

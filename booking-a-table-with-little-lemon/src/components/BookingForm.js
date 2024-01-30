@@ -9,7 +9,7 @@ const BookingForm =(props)=>{
     const[selectOccasion, setSelectOccasion] = useState('');
 
     const handleSubmit=(e)=>{
-e.preventDefault();
+e.preventDefault(e);
 props.submitForm(e);
     }
 
@@ -30,17 +30,15 @@ props.submitForm(e);
                 <label>
                     Add Date
                 </label>
-                <input type="date" value={selectedDate} onChange={(event)=>handleDateChange(event.target.value)}></input>
+                <input type="date" value={selectedDate} onChange={(event)=>handleDateChange(event.target.value)} required></input>
                 </div>
                 <div>
-                <label>
-                    Choose Time
-                </label>
-               <select value={time} onChange={(e)=>setTime(e.target.current)}>
-<option value=""> Select an Option</option>
-{props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
-               </select>
-               </div>
+              <label htmlFor="book-time">Choose Time:</label>
+              <select id="book-time" value={time} onChange={(e) => setTime(e.target.value)} required>
+                <option value="">Select a Time</option>
+               {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
+              </select>
+            </div>
 
                <div>
                <label>Select guests</label>
@@ -48,14 +46,15 @@ props.submitForm(e);
                </div>
                <div>
                <label>Select Occasion</label>
-               <select value={selectOccasion} key={selectOccasion} onChange={(e)=>setSelectOccasion(e.target.value)}/>
+               <select value={selectOccasion} key={selectOccasion} onChange={(e)=>setSelectOccasion(e.target.value)}>
                <option value="">Select and option</option>
   <option>Bithday</option> 
-  <option>Anniversary</option>   
+  <option>Anniversary</option> 
+  </select>  
   </div>
 
   <div>
-    <input type="submit">Make servation</input>
+    <input type="submit" value={"Make Your Reservation"}/>
     </div>    
     </form>     
             </section>
