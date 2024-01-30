@@ -39,7 +39,7 @@ const toggleMenu =()=>{
                 <a href='/'>Reservations</a>
             </li>
             <li>
-                <a href='/Bookings'>Order Online</a>
+                <a href='/bookings'>Order Online</a>
             </li>
             <li>
                 <a href='/'>Login</a>
