@@ -42,7 +42,7 @@ const toggleMenu =()=>{
                 <a href='/booking'>Order Online</a>
             </li>
             <li>
-                <a href='/'>Login</a>
+                <a href='/login'>Login</a>
             </li>
         </ul>
         </nav>
